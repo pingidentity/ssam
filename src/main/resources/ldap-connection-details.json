@@ -1,0 +1,28 @@
+{
+  "server-details":
+  {
+    "failover-set":
+    {
+      "failover-order":
+      [
+        {
+          "single-server":
+          {
+            "address":"localhost",
+            "port":1389
+          }
+        }
+      ]
+    }
+  },
+  "communication-security":
+  {
+    "security-type":"none"
+  },
+  "authentication-details":
+  {
+    "authentication-type":"simple",
+    "dn":"cn=SSAM User,dc=example,dc=com",
+    "password":"password"
+  }
+}

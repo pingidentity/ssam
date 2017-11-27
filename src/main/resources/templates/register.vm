@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Service Account Manager - Register</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ssam.css" rel="stylesheet">
+    <link href="images/favicon.ico" rel="shortcut icon">
+  </head>
+  <body>
+    #parse("_nav.vm")
+    <div class="container">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Account Sign Up</h3>
+          </div>
+          <div class="panel-body">
+            <div id="errorAlerts">
+              #if($error)
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  $!error
+                </div>
+              #end
+            </div>
+            <!--
+              To make form inputs required, simply add the 'required' attribute before the
+              closing tag to the element:
+                <input ... class="form-control" name="my-attribute" required>
+              And, to show the users that the input is required, simply add the 'required' class to
+              the 'class' attribute of the corresponding 'label' element:
+                <label for="my-attribute" class="control-label required">...</label>
+            -->
+            <form id="registerForm" action="register" method="POST" onsubmit="return validate()">
+              <input type="hidden" name="$_csrf.parameterName" value="$_csrf.token" />
+              <div class="form-group">
+                <label for="firstName" class="control-label">Name</label>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label class="sr-only" for="firstName">First Name</label>
+                    <input id="givenName" type="text" class="form-control" name="givenName" value="$!givenName" placeholder="First/Given Name" tabindex="1" autofocus>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="sr-only" for="lastName">Last Name</label>
+                    <input id="sn" type="text" class="form-control" name="sn" value="$!sn" placeholder="Last/Family Name" tabindex="2">
+                  </div>
+                </div>
+                <input id="cn" type="hidden" class="form-control" name="cn" value="">
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="control-label required">Email</label>
+                <input id="username" type="hidden" class="form-control" name="uid" value="" placeholder="Username">
+                <input id="email" type="email" class="form-control" name="mail" value="$!mail" placeholder="Email Address" tabindex="3" required>  
+              </div>
+              
+              <div class="form-group">
+                <label for="password" class="control-label required">Password </label>
+                <input id="password" name="userPassword" type="password" class="form-control" placeholder="Password" tabindex="4" required>
+                #parse("_password-requirements.vm")                                       
+              </div>
+              
+              <div class="form-group">
+                <label class="control-label required">Confirm Password </label>
+                <input id="confirmPassword" type="password" class="form-control" placeholder="Confirm Password" tabindex="5" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phone" class="control-label">Mobile Phone Number</label>
+                <input type="text" class="form-control" name="mobile" value="$!mobile" placeholder="Mobile Number" tabindex="6">
+              </div>
+            
+            #if ($pingActive)
+              #parse("_account-type-input.vm")
+            #end
+
+              <div class="mvm">
+                #if ($settings.isRecaptchaEnabled())
+                  <div class="g-recaptcha" data-sitekey="$settings.getRecaptchaSiteKey()"></div>
+                  <input id="g-recaptcha-response" type="hidden" name="g-recaptcha-response">
+                #end
+              </div>
+
+              <div class="mtl">
+                <input id="submitButton" type="submit" value="Create Account" class="btn btn-primary" tabindex="7">
+                <a class="btn btn-default" href="user" role="button" tabindex="8">Cancel</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ssam.js"></script>
+    ## reCAPTCHA script
+    #if ($settings.isRecaptchaEnabled())
+      <script src="https://www.google.com/recaptcha/api.js"></script>
+    #end
+    <script type="text/javascript">
+      $(document).ready(function() { 
+      #if($passwordRequirements.size() > 0)
+        if($("#errorAlert").length > 0){
+            $("#password_requirements_list").collapse('show');
+          }
+        $("#password_requirements_list").on('hide.bs.collapse', function () {
+          $("#requirements_link").text("Show Requirements");
+        });
+        $("#password_requirements_list").on('show.bs.collapse', function () {
+          $("#requirements_link").text("Hide Requirements");
+        });
+      #end
+      });
+      function validate() {
+        // verify the required inputs were provided
+        if (!verifyRequiredInputs($("#registerForm"), $("#errorAlerts"))) {
+          return false;
+        }
+  
+        var cipher = $("#password").val().trim();
+        var confirm = $("#confirmPassword").val().trim();
+  
+        // verify the passwords match
+        if (cipher !== confirm) {
+          showAlert($("#errorAlerts"), true, "Passwords must match.");
+          return false;
+        }
+        ## add g-captcha-response as an attribute constructed from a Google response if reCAPTCHA is enabled
+        #if ($settings.isRecaptchaEnabled())
+          $("#g-recaptcha-response").val(grecaptcha.getResponse());
+        #end
+        
+        // set the cn input value if both sn and givenName are available
+        var first = $("#givenName").val().trim();
+        var last = $("#sn").val().trim()
+        if(first && last)
+        {
+          $("#cn").val( first + " " + last );
+        }
+        // set the uid input value 
+        $("#username").val( $("#email").val() );
+        
+        return true;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+.navbar-static-top {
+  margin-bottom: 19px;
+}
+
+.brand-icon {
+  float: left;
+  display: block;
+  margin-top: -8px;
+  width: auto;
+}
+
+.divider-vertical {
+  float: left;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #eeeeee;
+  margin: -15px 10px;
+  height: 51px;
+}
+
+form label.required:after, form span.required:after {
+  color: #f67b1e;
+  font-size: 16px;
+  font-weight:bold;
+  content: ' *';
+  display: inline;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-signin .form-signin-heading {
+  margin-bottom: 10px;
+}
+
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.input-single {
+	height: 35px;
+  width: 38px;
+  padding: 5px 10px;
+  font-size: 14px;
+  line-height: 1.3;
+  border-radius: 6px;
+}
+
+.mvm {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.mhl {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.mtl {
+  margin-top: 15px;
+}
+
+.well {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.ptm {
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 400px){
+  .g-recaptcha iframe {
+    transform-origin: 0 0;
+    webkit-transform-origin:0 0;
+    -ms-transform-origin: 0 0;
+    -ms-transform: scale(0.90,0.90); /* IE 9 */
+    -webkit-transform: scale(0.90,0.90); /* Safari */
+    transform: scale(0.90,0.90);
+  }
+}
+
+@media screen and (max-width: 350px){
+  .g-recaptcha iframe {
+    transform-origin: 0 0;
+    webkit-transform-origin:0 0;
+    -ms-transform-origin: 0 0;
+    -ms-transform: scale(0.75,0.75); /* IE 9 */
+    -webkit-transform: scale(0.75,0.75); /* Safari */
+    transform: scale(0.75,0.75);
+  }
+}

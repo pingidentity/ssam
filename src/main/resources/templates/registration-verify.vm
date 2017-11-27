@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Service Account Manager - Verify Identity</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ssam.css" rel="stylesheet">
+    <link href="images/favicon.ico" rel="shortcut icon">
+  </head>
+  <body>
+    #parse("_nav.vm")
+    <div class="container">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Verify Registration Code</h3>
+          </div>
+          <div class="panel-body">
+            <div id="successAlerts"></div>
+            <div id="errorAlerts">
+            #if($error)
+              <div class="alert alert-danger alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <span>Failed to verify your code because of missing or invalid information. Update your verification 
+                  code and try again, or you can request another code to be sent.</span>
+              </div>
+            #end
+            </div>
+            
+            <p>A registration code has been sent via $result.getDeliveryMechanism() to $result.getRecipientID().
+               When you have received the code, enter it below. If you do not receive the code, you can request another code to be sent.</p>
+               
+            <form class="form-horizontal" action="verifyRegistrationCode" method="POST" onsubmit="return validate()">
+              <div id="form-input" class="form-group">
+                <div class="mhl">
+                  <input type="hidden" name="$_csrf.parameterName" value="$_csrf.token" />
+                  <input type="hidden" name="code" id="code">
+                #if ($settings.isSingleInputEnabled())
+                  <input class="form-control code" type="text" placeholder="Enter or paste code" required>
+                #else
+                  #foreach ($number in [1..$settings.getNumberOfInputs()])
+                    <input class="text-center input-single code" type="text" required size="1" maxlength="1" required>
+                  #end 
+                #end
+                </div> 
+                <div class="mtl mhl">
+                #if($settings.isSingleInputEnabled())
+                  <input id="verifyPasswordButton" value="Verify Code" type="submit" class="btn btn-primary"></input>
+                #end
+                  <button id="resendCodeButton" type="button" class="btn">Resend Code</button>
+                </div>
+              </div>
+            </form>       
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ssam.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {  
+        autofocusCodeInputs();
+  
+      #if(!$settings.isSingleInputEnabled())
+        ## If not using a single input, use this JS code to auto-submit the form       
+        // the final "code" input will submit the form for verifying
+        var numInputs = $settings.getNumberOfInputs();
+        $(".code").keyup(function(e) {
+          var code = getVerificationCode();
+          if (code.length === numInputs) {
+            $("form").submit();
+          }
+        });
+      #end
+    
+        // add a click handler to the "Resend Code" button to send an AJAX request
+        $("#resendCodeButton").click(function() {
+          // clear the code inputs
+          $('#form-input :input[type="text"]').each(function() {
+            $(this).val("");
+          });
+    
+          // perform a POST to resend the registration code
+          $.ajax({
+            type : "POST",
+            url : "resendRegistrationCode",
+            data : { "$_csrf.parameterName" : "$_csrf.token" },
+          })
+          .done(function(result) {
+            // display a success alert and populate the delivery info
+            closeAlerts($("#errorAlerts"));
+            showAlert($("#successAlerts"), false, "Successfully sent registration code.");
+            $("#deliveryMechanism").html(result.deliveryMechanism);
+            $("#recipientID").html(result.recipientID);
+            $(".code").first().focus(); 
+          }).fail(function(error) {
+            closeAlerts($("#successAlerts"));
+            if(error.status === 403) {
+              window.open(window.location.pathname,"_self");
+            }
+            else {
+              showAlert($("#errorAlerts"), true, error.responseText);
+            }
+          });
+        });
+      });
+      
+      function validate() {
+        // verify the required inputs
+        if (!verifyRequiredInputs($("form"), $("#errorAlerts"))) {
+          return false;
+        }
+        
+        // verify that the verification code is being sent
+        $("#code").val(getVerificationCode());     
+        return true;
+      }
+    </script>
+  </body>
+</html>

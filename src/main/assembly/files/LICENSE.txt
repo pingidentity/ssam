@@ -1,0 +1,711 @@
+                       Click-Through License Agreement
+
+THIS CLICK-THROUGH AGREEMENT (THIS "AGREEMENT") IS BY AND BETWEEN PING
+IDENTITY CORPORATION ("PING IDENTITY") AND THE COMPANY OR ENTITY ON WHOSE
+BEHALF YOU ARE EXECUTING THIS AGREEMENT ("CUSTOMER"). YOU REPRESENT THAT YOU
+HAVE THE AUTHORITY TO BIND CUSTOMER TO THE TERMS OF THIS AGREEMENT. BY
+AGREEING TO THE TERMS OF THIS AGREEMENT OR BY ACCESSING, USING OR INSTALLING
+ANY PART OF THE PRODUCTS, CUSTOMER EXPRESSLY AGREES TO AND CONSENTS TO BE
+BOUND BY ALL OF THE TERMS OF THIS AGREEMENT.  IF CUSTOMER DOES NOT AGREE TO
+ANY OF THE TERMS OF THIS AGREEMENT, CUSTOMER IS PROHIBITED FROM DOWNLOADING,
+INSTALLING, ACTIVATING OR USING THE PRODUCTS.  THE EFFECTIVE DATE OF THIS
+AGREEMENT IS THE DATE ON WHICH CUSTOMER ACCEPTS THESE TERMS BY CLICKING
+"ACCEPT" OR THE SIMILARLY LABELED BUTTON INDICATING ASSENT (THE "EFFECTIVE
+DATE"). COLLECTIVELY, PING IDENTITY AND CUSTOMER MAY BE REFERRED TO AS THE
+"PARTIES" OR IN THE SINGULAR AS "PARTY".
+
+For good and valuable consideration, the receipt and sufficiency of which is
+hereby acknowledged, the Parties agree as follows:
+
+1.  Definitions.
+
+"Administrator" is an individual who has been granted administrative
+permissions by Customer to the Service in order to set-up, modify, and suspend
+the Service, each as applicable.
+
+"Affiliate(s)" means any entity that directly or indirectly controls, is
+controlled by, or is under common control with the subject entity.  "Control,"
+for purposes of this definition, means direct or indirect ownership or control
+of more than 50% of the voting interests of the subject entity.
+
+"API" means an application programming interface.
+
+"Customer Data" means all electronic data or information submitted by Customer
+and its Users to the Service.
+
+"Documentation" means Ping Identity's then current on-line user's manuals made
+generally available by Ping Identity and provided to Customer along with the
+Products.
+
+"License Key" means the key provided to Customer by Ping Identity that is used
+to set up the functionality and permitted scope of use of the Software in
+accordance with the terms of this Agreement and any applicable Order Form.
+
+"Malicious Code" means viruses, worms, time bombs, Trojan horses and other
+harmful or malicious code, files, scripts, agents or programs.
+
+"Order Form" means any ordering document for Customer's purchases from Ping
+Identity that is duly executed hereunder by both parties from time to time.
+Each Order Form that has been signed by authorized representatives of each
+party incorporates this Agreement by reference.  An Order Form may or may not
+be required for download, access and/or use of the Products.
+
+"Products" means the Software, Service, Trial Products (defined in Section
+2.4), SDKs and Beta Versions (defined in Section 2.6).
+
+"SDK" means the software development tools, including, but not limited to,
+sample code, documentation and APIs, made available to Customer when the
+Products are downloaded or accessed.
+
+"Service" means web-based or mobile applications provided by Ping Identity
+that are identified on an Order Form or otherwise made available to Customer.
+
+"Software" means the Ping Identity programs identified on an Order Form or
+otherwise downloaded and/or installed by Customer.
+
+"Support Services" means those maintenance and support services that Customer
+obtains from Ping Identity set forth in Section 3.2 below.
+
+"Users" means any Administrator and (i) employees, consultants, contractors,
+agents and customers of Customer, or other individuals, who are provisioned by
+Customer to utilize the Service in connection with Customer's use of the
+Service and/or (ii) entities authorized by Customer to transmit information
+through the Service to Customer in order to access Customer's services, as
+well as any individuals associated with such entities.  Order Forms may define
+the scope of the permitted Users under such Order Form.
+
+2.  General.
+
+2.1  Provision of Service.  Subject to the terms and conditions of this
+Agreement, including without limitation the payment of all applicable Fees (as
+defined below), Ping Identity shall make the Service available to Customer
+during the term specified in the applicable Order Form(s) so that Customer may
+utilize the Service, solely for Customer's business use, all in accordance
+with this Agreement, the applicable Order Form(s) (including any additional
+requirements and/or restrictions as set forth in such Order Form(s)) and the
+applicable Documentation.  Customer agrees that its purchase of the Products
+is neither contingent upon the delivery of any future functionality or
+features nor dependent upon any oral or written public comments made by Ping
+Identity with respect to future functionality or features.
+
+2.2  Software License Grant.  Subject to the terms and conditions of this
+Agreement, including without limitation the payment of all applicable Fees (as
+defined below), Ping Identity hereby grants Customer, during the term
+specified in the applicable Order Form(s), a limited, non-exclusive, non-
+sublicenseable, non-transferable license to install the Software, in machine-
+readable form only, and to use the Software solely for Customer's business
+use, all in accordance with this Agreement, any applicable Order Form(s)
+(including any additional requirements and/or restrictions as set forth in
+such Order Form(s)) and the applicable Documentation.
+
+2.3  Evaluation and Developer Licenses.  If Ping Identity provides Customer
+with a trial, evaluation or developer license to the Products (the "Trial
+Products"), Customer agrees to use the Trial Products solely for evaluation
+purposes, in accordance with the use guidelines and restrictions set forth in
+Section 3.3, for a thirty (30) day evaluation period unless a different period
+is otherwise agreed to in writing by Ping Identity (the "Trial Period").  Any
+use of the Trial Products during a Trial Period is limited solely to non-
+production use.  At the end of the Trial Period, Customer's right to use the
+Trial Products automatically expires and Customer agrees to uninstall the
+Trial Products and return to Ping Identity all copies or partial copies of the
+Trial Products or certify to Ping Identity in writing that all copies or
+partial copies of the Trial Products have been deleted from Customer's
+computer libraries and/or storage devices and destroyed.  If Customer desires
+to continue its use of the Trial Products beyond the Trial Period, Customer
+shall contact Ping Identity to acquire a license to, or subscription for, the
+Trial Products for the applicable fee.
+
+2.4  SDK License.  The terms and conditions of this paragraph apply to
+Customer's use of SDKs.  Customer is provided a license to the SDK solely for
+Customer's internal use to develop products that enable integration with the
+Products.  In addition to the use guidelines and restrictions set forth in
+Section 3.3, below, Customer may not reproduce, disclose, market or distribute
+the SDK or any applications containing any executable versions of the SDK to
+third parties or over the internet, or use such executables in excess of any
+restrictions that may be contained in an Order Form.  The license to the SDK
+shall expire when Customer's license to the underlying Products (or Trial
+Products) expires.
+
+2.5  Beta Versions.  If Ping Identity and Customer mutually agree in writing,
+Customer may receive beta, preview or other pre-release Products or features
+from Ping Identity ("Beta Versions").  Beta Versions may not have been tested
+or debugged and are experimental, and any documentation may be in draft form.
+Ping Identity may change or discontinue Beta Versions at any time without
+notice.
+
+2.6  ANY TRIAL PRODUCTS, SDKS AND BETA VERSIONS ARE PROVIDED ON AN "AS-IS" AND
+"AS AVAILABLE" BASIS AT CUSTOMER'S SOLE RISK.  PING DISCLAIMS ANY AND ALL
+LIABILITY FOR CUSTOMER'S USE OF THE TRIAL PRODUCTS, SDKS OR BETA VERSIONS.
+Ping Identity does not provide support for Trial Products, SDKs or Beta
+Versions.  Trial Products, SDKs and Beta Versions may be subject to reduced or
+different security, compliance and privacy commitments.  The following
+Sections of this Agreement shall not apply to SDKs, Trial Products or Beta
+Versions: 3.1(a)(ii), 3.2, 7.1, 7.2, 8.1 and 9.1.  PING IDENTITY'S CUMULATIVE
+LIABILITY ARISING OUT OF OR RELATED TO ANY USE OF TRIAL PRODUCTS, SDKS AND/OR
+BETA VERSIONS SHALL NOT EXCEED $50.00.
+
+2.7  Delivery, Installation and Acceptance of the Software
+
+     (a)  Delivery, Installation and Acceptance of the Software.  The
+Software will be delivered to Customer by electronic download (and may require
+issuance of a License Key), unless otherwise agreed to by the parties in
+writing.  Customer will be solely responsible for installing any Software as
+permitted under this Agreement unless otherwise set forth in an Order Form.
+All Software will be deemed accepted upon delivery.
+
+     (b)  Ping Identity Assistance.  In the event that Customer requires any
+administration, training, installation, health check, or similar services with
+respect to the Products, any such services and related fees shall be set forth
+in an Order Form and such services shall be provided by Ping Identity without
+the need for a separate professional services agreement unless otherwise
+agreed to by the parties.
+
+2.8  Order Forms.  Customer and its Affiliates may place orders under this
+Agreement by executing Order Form(s).  When an Affiliate of Customer signs an
+Order Form under this Agreement, the Affiliate shall be considered the
+Customer for purposes of such Order Form and shall be bound by the terms and
+conditions of this Agreement.
+
+2.9  Resellers. In the event that Customer purchases subscriptions to the
+Products through an authorized reseller of Ping Identity (a "Reseller"), no
+Order Forms will be executed between Ping Identity and Customer.  Ping
+Identity's official ordering documentation with the Reseller will contain the
+details of the subscriptions to the Products (including the scope of permitted
+use, quantities of licenses, etc.), and references to Order Forms herein will
+refer to such documentation, so Customer must obtain such details from the
+Reseller.  Resellers have no authority to modify any of the terms of this
+Agreement, and may not grant Customer any rights to the Products beyond what
+is set forth in the ordering documentation between Ping Identity and Reseller.
+
+3.  Responsibilities for Service; Support for Products; Use Guidelines;
+Restrictions
+
+3.1  Responsibilities for Service.
+
+     (a)  Ping Identity Responsibilities.  Ping Identity shall: (i) not
+disclose the Customer Data except to any third parties as necessary to operate
+the Service (provided that Customer hereby grants to Ping Identity a
+perpetual, non-cancelable, worldwide, non-exclusive license to utilize any
+data, on an anonymous or aggregate basis only, that arises from the use of the
+Products by Customer, whether disclosed on, subsequent to, or prior to the
+Effective Date, to improve the functionality of the Products and any other
+legitimate business purpose, including the right to sublicense such data to
+third parties, subject to all legal restrictions regarding the use and
+disclosure of such information); and (ii) maintain the security and integrity
+of the Service and the Customer Data in accordance with Ping Identity's
+internal security policy available at
+https://www.pingidentity.com/en/legal/security.html (the "Security Policy").
+
+     (b)  Customer Responsibilities.  Customer is responsible for all
+activities that occur in any Users' accounts and for compliance with this
+Agreement by any such Users.  Customer shall: (i) have sole responsibility for
+the accuracy, quality, integrity, legality, reliability, and appropriateness
+of all Customer Data; (ii) prevent unauthorized access to, or use of, the
+Service, and notify Ping Identity promptly of any such unauthorized access or
+use; and (iii) comply with all applicable local, state, federal and foreign
+laws in using the Service.  Customer shall ensure that the terms of Customer's
+agreement with any entities that Customer authorizes to submit Customer Data
+to Customer through the Service are consistent with this Agreement and at
+least as protective of Ping Identity as is this Agreement.  If Customer
+becomes aware of any violation of Customer's obligations under this Agreement
+by any User, Customer will promptly notify Ping Identity and work with Ping
+Identity to immediately terminate access of such User(s) to the Service.  Ping
+Identity is not obligated under the terms of this Agreement to provide any
+customer service or support to any User other than Administrators; such
+responsibility (if any) shall remain with Customer.
+
+3.2  Support for Products.  Ping Identity will provide those Support Services
+for the Products in accordance with Ping Identity's support agreement
+available at https://www.pingidentity.com/en/legal/support-policy.html (the
+"Support Policy").
+
+3.3  Use Guidelines; Restrictions.  Customer shall use the Products solely for
+its own business purposes in accordance with this Agreement and any related
+Order Form (including any additional requirements and/or restrictions as set
+forth in such Order Form). Customer shall obtain any necessary consents from
+Users for the transmission of Customer Data to Ping Identity and other third
+parties in connection with the Products, including as may be necessary under
+any data protection laws and regulations.  Customer shall not: (i) license,
+sublicense, sell, resell, rent, lease, transfer, assign, distribute, time
+share, operate as a service bureau or managed service, or otherwise
+commercially exploit or make the Products available to any third party except
+as expressly contemplated by this Agreement; (ii) modify, copy, adapt, alter,
+translate or create derivative works of the Products; (iii) frame or mirror
+any content forming part of the Service, other than on Customer's own
+intranets or otherwise for its own internal business purposes; (iv) reverse
+engineer, decompile or disassemble the Products (or otherwise attempt to
+derive the source code for the Software); (v) take any action that would cause
+the Products (including a License Key) to be placed in the public domain; (vi)
+remove, alter, or obscure any proprietary notices of Ping Identity, its
+licensors or supplier included in the Products; (vii) send spam or otherwise
+duplicative or unsolicited messages in violation of applicable laws through
+the Service; (viii) send or store infringing, obscene, threatening, libelous,
+or otherwise unlawful or tortious material, including material that is harmful
+to children or violates third-party privacy rights; (ix) send or store
+Malicious Code; (x) interfere with or disrupt the integrity or performance of
+the Service or the data contained therein, including exceeding rate
+limitations with respect to API usage as set forth in the Documentation; (xi)
+access the Products in order to (A) build a competitive product or service, or
+(B) copy any ideas, features, functions or graphics of the Products; or (xii)
+attempt to gain unauthorized access to the Service or its related systems or
+networks.
+
+3.4  Protected Health Information; Nonpublic Personal Information.  Customer
+represents and warrants that it will not transmit or expose to Ping Identity
+any (a) protected health information (as that term is used in the Health
+Insurance Portability and Accountability Act of 1996 (HIPAA)), (b) nonpublic
+personal information (as that term is used in the Gramm-Leach-Bliley Act), (c)
+payment card data (as regulated by the Payment Card Industry Security
+Standards Council) or (d) personal information or data (as such terms are used
+in state breach notification laws or European Union privacy directives or
+other similar legislation) as a part of using the Products, in connection with
+any support activities, or otherwise under this Agreement.  Notwithstanding
+the foregoing, Ping Identity agrees that the following types of personal
+information shall be permitted to be transmitted to Ping Identity through the
+Service: first name; last name; email address; IP address; user name;
+telephone number; and when using the Service for directory functionality, any
+type of data that is specifically designated within the Service by a data
+field for that type of information (by way of example, a field designated for
+email address means that email addresses may be provided, but social security
+numbers may not be provided if a field is not expressly designated for such
+type of information (and blank, non-predetermined fields shall not be
+construed as permissive of including such types of information)).
+
+4.  Fees & Payment; Audit
+
+4.1  Fees.  Customer shall pay all fees specified in any Order Forms
+hereunder (the "Fees"). Except as otherwise provided, all fees are quoted and
+payable in United States dollars.  Except as otherwise specified herein or in
+an Order Form, stated fees are based on the scope  of the Product
+subscriptions purchased and not actual usage, payment obligations are non-
+cancelable, and fees paid are non-refundable.  In the event that Customer is
+purchasing a subscription based on the number of individual Users, connections
+or another metric set forth in an Order Form, and Customer's actual usage
+exceeds the applicable limit on such metric, overage charges shall apply and
+Customer shall remit such charges to Ping Identity.
+
+4.2  Invoicing & Payment Terms. All Fees will be invoiced in advance and in
+accordance with the relevant Order Form.  Unless otherwise stated in an Order
+Form, charges are due net thirty (30) days from the date of the invoice.
+Customer is responsible for maintaining complete and accurate billing and
+contact information.
+
+4.3  Overdue Payments.  For those payments that are invoiced, any payment not
+received from Customer by the due date may accrue (except with respect to
+charges then under reasonable and good faith dispute), at Ping Identity's
+discretion, late charges at the rate of 1.5% of the outstanding balance per
+month, or the maximum rate permitted by law, whichever is lower, from the date
+such payment was due until the date paid.
+
+4.4  Taxes.  Ping Identity's invoices shall include any applicable direct or
+indirect local, state, federal or foreign taxes, levies, duties or similar
+governmental assessments of any nature, including value-added, use or
+withholding taxes (collectively, "Taxes").  Customer is responsible for paying
+all Taxes associated with its purchases hereunder, above and beyond the Fees,
+excluding taxes based on Ping Identity's net income or property, unless
+Customer provides Ping Identity with a valid tax exemption certificate
+authorized by the appropriate taxing authority.  Unless otherwise stated, all
+prices set forth on an Order Form are exclusive of Taxes.
+
+4.5  Suspension of Service.  Ping Identity reserves the right to suspend the
+Service provided to Customer if: (a) Customer is delinquent on any payment
+obligations for more than thirty (30) days; (b) Ping Identity believes that
+suspension of the Service is necessary to comply with the law or requests of
+governmental entities; (c) Ping Identity determines that Customer's use of the
+Service in violation of this Agreement, or the transmission of any Customer
+Data, poses any security or vulnerability risk to Ping Identity or the
+Service; or (d) Customer's use of the Service in violation of this Agreement
+may subject Ping Identity or any third party to any liability to a third
+party.  If Ping Identity suspends Customer's right to access or use any
+portion or all of the Service, Customer remains responsible for all fees and
+charges Customer has incurred through the date of suspension, and during such
+suspension if suspended pursuant to clause (a), (c) or (d) above.
+
+4.6  Audit of Software Usage.  Ping Identity will have the right, upon
+reasonable prior written notice to Customer, at a mutually agreeable time, and
+no more than once in any twelve (12) month period, to have an independent
+audit firm selected by Ping Identity audit Customer's equipment on which the
+Software is installed, and all related back-up files, to verify compliance
+with this Agreement.  Any such audit will be conducted during normal business
+hours in a manner so as not to unreasonably interfere with Customer's normal
+operations.  Ping Identity may also, at any time, audit Customer's use of the
+Service to verify compliance with this Agreement.  Such audits will be
+conducted at Ping Identity's expense. In the event that an audit reveals that
+Customer has failed to pay Fees consistent with its use of the Products,
+Customer will remit to Ping Identity the applicable Fees for the overuse, and
+reimburse Ping Identity for all reasonable costs and expenses incurred by Ping
+Identity in connection with such audit.
+
+5.  Confidentiality.
+
+5.1  Definition of Confidential Information.  As used herein, "Confidential
+Information" means all confidential and proprietary information of a party
+("Disclosing Party") disclosed or made available to the other party
+("Receiving Party"), whether orally or in writing, that is designated as
+confidential or that reasonably should be understood to be confidential given
+the nature of the information and the circumstances of disclosure, including
+the terms and conditions of this Agreement, the Customer Data, the Products,
+business and marketing plans, technology and technical information, financial
+results and information, product designs, product roadmaps, results of
+penetration testing, security reports or audits and business processes.
+Confidential Information (except for Customer Data) shall not include any
+information that: (a) is or becomes generally known to the public without
+breach of any obligation owed to the Disclosing Party; (b) was known to the
+Receiving Party prior to its disclosure by the Disclosing Party without breach
+of any obligation owed to the Disclosing Party; (c) was independently
+developed by the Receiving Party without breach of any obligation owed to the
+Disclosing Party; or (d) is received from a third party without breach of any
+obligation owed to the Disclosing Party.
+
+5.2  Confidentiality.  The Receiving Party shall not disclose or use any
+Confidential Information of the Disclosing Party for any purpose outside the
+scope of this Agreement, except with the Disclosing Party's prior written
+permission.
+
+5.3  Protection.  Each party agrees to protect the confidentiality of the
+Confidential Information of the other party in the same manner that it
+protects the confidentiality of its own proprietary and confidential
+information of like kind (but in no event using less than reasonable care).
+
+5.4  Compelled Disclosure.  If the Receiving Party is compelled by law to
+disclose Confidential Information of the Disclosing Party, it shall provide
+the Disclosing Party with prior notice of such compelled disclosure (to the
+extent legally permitted) and reasonable assistance, at Disclosing Party's
+cost, if the Disclosing Party wishes to contest the disclosure.
+
+5.5  Remedies.  If the Receiving Party discloses or uses (or threatens to
+disclose or use) any Confidential Information of the Disclosing Party in
+breach of confidentiality protections hereunder, the Disclosing Party shall
+have the right, in addition to any other remedies available to it, to seek
+injunctive relief to enjoin such acts, it being specifically acknowledged by
+the parties that any other available remedies are inadequate.
+
+6.  Proprietary Rights.
+
+6.1  Reservation of Rights.  Subject to the limited rights expressly granted
+hereunder, Ping Identity reserves all rights, title and interest in and to the
+Products (and any enhancements, modifications, or derivative works thereof, or
+other software development performed by Ping Identity), including all related
+intellectual property rights.  No rights are granted to Customer hereunder
+other than as expressly set forth herein.
+
+6.2  Customer Data.  As between Ping Identity and Customer, Customer
+exclusively owns all rights, title and interest in and to all Customer Data.
+
+6.3  Suggestions. Ping Identity shall have a royalty-free, worldwide,
+transferable, sublicenseable, irrevocable, perpetual license to use or
+incorporate into the Products any suggestions, enhancement requests,
+recommendations or other feedback provided by Customer or its Users relating
+to the operation of the Products.
+
+7.  Warranties & Disclaimers.
+
+7.1  Warranties.  Each party represents and warrants that it has the legal
+power to enter into this Agreement.  Ping Identity represents and warrants
+that it will provide the Products in a manner consistent with general industry
+standards reasonably applicable to the provision thereof.
+
+7.2  Performance Warranty for Software.  For a period of ninety (90) days
+after the date of delivery of the Software by electronic download (the
+"Warranty Period"), Ping Identity warrants that the Software, when used as
+permitted by Ping Identity and in accordance with the instructions in the
+Documentation, will operate substantially as described in the Documentation.
+Ping Identity will, at its own expense and as its sole obligation and
+Customer's exclusive remedy for any breach of this warranty, use commercially
+reasonable efforts to (a) correct any material reproducible error that
+Customer reports to Ping Identity in writing during the Warranty Period, or
+(b) replace the defective Software.  In the event that Ping Identity, in its
+sole discretion, may not achieve either (a) or (b) as a remedy for breach of
+this warranty, Ping Identity agrees to accept return of the Software,
+terminate this Agreement and refund Customer all unused, prepaid fees with
+respect to the defective Software.  Any such error correction provided to
+Customer under (a) will not extend the original Warranty Period.
+
+7.3  Disclaimer.  THE EXPRESS WARRANTIES IN THIS SECTION 7 ARE IN LIEU OF ALL
+OTHER WARRANTIES, EXPRESS, IMPLIED, OR STATUTORY, REGARDING THE PRODUCTS AND
+PING IDENTITY EXPRESSLY DISCLAIMS ALL OTHER WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT OF THIRD-PARTY RIGHTS.  PING
+IDENTITY DOES NOT WARRANT THAT THE FUNCTIONS CONTAINED IN THE PRODUCTS WILL
+MEET CUSTOMER'S REQUIREMENTS, OR THAT THE OPERATION AND RESULTS OF THE
+PRODUCTS WILL BE UNINTERRUPTED OR ERROR-FREE, OR THAT DEFECTS IN THE PRODUCTS
+WILL BE CORRECTED.  THE ENTIRE RISK AS TO THE RESULTS AND PERFORMANCE OF THE
+PRODUCTS IS ASSUMED BY CUSTOMER.  FURTHERMORE, PING IDENTITY DOES NOT WARRANT
+OR MAKE ANY REPRESENTATIONS REGARDING THE USE OR THE RESULTS OF THE USE OF THE
+PRODUCTS OR RELATED DOCUMENTATION IN TERMS OF CORRECTNESS OR ACCURACY,
+RELIABILITY, CURRENTNESS OR OTHERWISE.  NO ORAL OR WRITTEN INFORMATION OR
+ADVICE GIVEN BY PING IDENTITY OR ITS AUTHORIZED REPRESENTATIVES SHALL CREATE A
+WARRANTY OR IN ANY WAY INCREASE THE SCOPE OF ANY WARRANTY HEREIN.
+
+8.  Indemnification.
+
+8.1  Indemnification by Ping Identity. Subject to the terms of the Agreement,
+Ping Identity will defend at its own expense any action against Customer
+brought by a third party alleging that the Products, in each case, as
+delivered, infringe any U.S. patents issued as of the Effective Date or any
+copyrights or misappropriate any trade secrets, in each case, of a third
+party, and Ping Identity will pay those costs and damages finally awarded
+against Customer in any such action that are specifically attributable to such
+claim or those costs and damages agreed to in a monetary settlement of such
+action.  The foregoing obligations are conditioned on Customer: (a) notifying
+Ping Identity promptly in writing of such claim or allegation, setting forth
+in reasonable detail the facts and circumstances surrounding the claim;
+(b) giving Ping Identity sole control of the defense thereof and any related
+settlement negotiations, including not making any admission of liability or
+take any other action that limits the ability of Ping Identity to defend the
+claim; and (c) cooperating and, at Ping Identity's request and expense,
+assisting in such defense.  If the Products become, or in Ping Identity's sole
+opinion are likely to become, the subject of an infringement claim, Ping
+Identity may, at its option and expense, either: (i) procure for Customer the
+right to continue using the Products; (ii) replace or modify the Products so
+that they become non-infringing; or (iii) terminate this Agreement and refund
+Customer any unused, prepaid fees for the infringing Products covering the
+remainder of the subscription term after the date of termination.
+Notwithstanding the foregoing, Ping Identity will have no obligation under
+this Section 8.1 or otherwise with respect to any infringement claim based
+upon: (w) any use of the Products not in accordance with this Agreement;
+(x) any use of the Products in combination with products, equipment, software,
+or data not supplied or approved in writing by Ping Identity if such
+infringement would have been avoided but for the combination with other
+products, equipment, software or data; (y) any use of a prior release of the
+Software after a more current release has been made available to Customer; or
+(z) any modification of the Products by any person other than Ping Identity.
+THIS SECTION 8.1 STATES PING IDENTITY'S ENTIRE LIABILITY AND THE CUSTOMER'S
+EXCLUSIVE REMEDY FOR ANY CLAIMS OF INFRINGEMENT.
+
+8.2  Indemnification by Customer.  Subject to the terms of this Agreement,
+Customer will defend at its own expense any action against Ping Identity
+brought by a third party (including any User) (a) alleging that (i) Ping
+Identity's possession or use of the Customer Data, (ii) Customer's use of the
+Products in violation of this Agreement, (iii) any actions by Customer
+referred to in clauses (w)-(z) of Section 8.1 above, or (iv) Customer's
+provision to Ping Identity of any of the information referred to in Section
+3.4 above, infringes, violates, or misappropriates the rights of, or has
+otherwise harmed, a third party, or (b) concerning (i) a User's use of the
+Service, or (ii) any dispute between any User and Customer related to the
+Service (in each case, provided it is not due to Ping Identity's breach of
+this Agreement), and Customer will pay those costs and damages finally awarded
+against Ping Identity in any such action that are specifically attributable to
+such claim or those costs and damages agreed to in a monetary settlement of
+such action; provided, that Ping Identity (A) notifying Customer promptly in
+writing of such claim or allegation, setting forth in reasonable detail the
+facts and circumstances surrounding the claim; (B) gives Customer sole control
+of the defense and settlement of the claim (provided that Customer may not
+settle or defend any claim unless it unconditionally releases Ping Identity of
+all liability); and (C) provides to Customer, at Customer's cost, all
+commercially reasonable assistance.
+
+9.  Limitation of Liability.
+
+9.1  Limitation of Liability.  PING IDENTITY'S CUMULATIVE LIABILITY ARISING
+OUT OF OR RELATED TO THIS AGREEMENT (WHETHER IN CONTRACT OR TORT OR UNDER ANY
+OTHER THEORY OF LIABILITY) SHALL NOT EXCEED THE LESSER OF $250,000 OR THE
+TOTAL AMOUNT OF FEES PAID BY CUSTOMER HEREUNDER IN THE 12 MONTHS PRECEDING THE
+INCIDENT.
+
+9.2  Exclusion of Consequential and Related Damages.  IN NO EVENT SHALL PING
+IDENTITY HAVE ANY LIABILITY TO CUSTOMER (A) FOR ERROR OR INTERRUPTION OF USE,
+LOSS OR INACCURACY OR CORRUPTION OF DATA, (B) FOR COST OF PROCUREMENT OF
+SUBSTITUTE GOODS, SERVICES, RIGHTS, OR TECHNOLOGY, OR (C) FOR ANY INDIRECT,
+SPECIAL, INCIDENTAL, PUNITIVE, OR CONSEQUENTIAL DAMAGES INCLUDING, BUT NOT
+LIMITED TO LOSS OF REVENUES AND LOSS OF PROFITS, HOWEVER CAUSED AND, WHETHER
+IN CONTRACT, TORT OR UNDER ANY OTHER THEORY OF LIABILITY, WHETHER OR NOT PING
+IDENTITY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+10.  Term & Termination.
+
+10.1  Term of Agreement.  This Agreement commences on the Effective Date and
+continues for as long as Customer is legally permitted by Ping Identity to use
+the Products, as evidenced by the subscription term set forth in any related
+Order Form (and any subsequent Order Forms) or as otherwise agreed to by Ping
+Identity in writing.
+
+10.2  Termination for Cause.  Either party may terminate this Agreement for
+cause: (a) upon thirty (30) days written notice of a material breach of this
+Agreement by the other party if such breach remains uncured at the expiration
+of such period; or (b) if the other party becomes the subject of a petition in
+bankruptcy or any other proceeding relating to insolvency, receivership,
+liquidation or assignment for the benefit of creditors.  Upon any termination
+for cause by Customer, Ping Identity shall refund Customer any unused, prepaid
+fees covering the remainder of the subscription term after the date of
+termination.
+
+10.3  Effects of Termination.  Upon expiration or termination of this
+Agreement: (a) all rights to use the Products (including all licensed rights
+for the Software) granted in this Agreement will immediately cease to exist;
+(b) Customer must promptly discontinue all use of the Products and related
+Confidential Information, erase all copies of the Software and related
+Confidential Information from Customer's computers whether or not modified or
+merged into other materials, and return to Ping Identity, or at Ping
+Identity's request, destroy, all copies of the Software and related
+Confidential Information in Customer's possession or control and certify in
+writing to Ping Identity that Customer has fully complied with these
+requirements; and (c) upon Customer's written request, Ping Identity must
+promptly discontinue all use of Customer's Confidential Information, erase all
+copies of the Customer's Confidential Information from Ping Identity's
+computers whether or not modified or merged into other materials, and return
+to Customer, or at Customer's request, destroy, all copies of Customer's
+Confidential Information in Ping Identity's possession or control and certify
+in writing to Customer that Ping Identity has fully complied with these
+requirements.
+
+10.4  Outstanding Fees.  Termination shall not relieve Customer of the
+obligation to pay any fees accrued or payable to Ping Identity prior to the
+effective date of termination.  If this Agreement is terminated by Ping
+Identity for cause, Customer shall remain responsible for any payments set
+forth on any outstanding Order Forms, regardless of whether such amounts have
+been invoiced or are payable at the time of such termination.
+
+10.5  Surviving Provisions.  The following provisions shall survive any
+termination or expiration of this Agreement: Sections 2.6, 3.3, 4, 5, 6, 7.3,
+8, 9, 10 and 11.
+
+11.  General Provisions.
+
+11.1  Relationship of the Parties.  The parties are independent contractors.
+This Agreement does not create a partnership, franchise, joint venture,
+agency, fiduciary or employment relationship between the parties.
+
+11.2  No Third-Party Beneficiaries.  There are no third-party beneficiaries to
+this Agreement.
+
+11.3  Open Source Software. Certain items of software included with the
+Products are subject to the "open source" or "free software" licenses ("Open
+Source Software").  Some of the Open Source Software is owned by third
+parties.  Nothing in this document limits Customer's rights under the terms
+and conditions of any applicable end user license for the Open Source
+Software.
+
+11.4  Notices.  All notices under this Agreement shall be in writing and may
+be sent by electronic mail.  Notices shall be deemed to have been given upon
+the second business day after sending by email. Notices to Ping Identity shall
+be sent to legal@pingidentity.com.  Notices to Customer, unless otherwise
+indicated by Customer, may be sent to the individual that executed this
+Agreement on behalf of Customer and/or an Administrator by email, or at the
+address listed at the beginning of this Agreement.
+
+11.5  Waiver and Cumulative Remedies.  Failure by either Party to enforce any
+provision of this Agreement will not be deemed a waiver of future enforcement
+of that or any other provision of this Agreement.  Other than as expressly
+stated herein, the remedies provided herein are in addition to, and not
+exclusive of, any other remedies of a party at law or in equity.
+
+11.6  Severability.  If any provision of this Agreement is held by a court of
+competent jurisdiction to be illegal, invalid, unenforceable, or otherwise
+contrary to law, the provision shall be modified by the court and interpreted
+so as best to accomplish the objectives of the original provision to the
+fullest extent permitted by law, and the remaining provisions of this
+Agreement shall remain in force and effect.
+
+11.7  Third-Party Services.  The Products may be used by Customer to interface
+with certain third-party services and applications ("Third-Party Services").
+Ping Identity makes no warranty regarding the operation or functionality of
+such Third-Party Services. Ping Identity does not guarantee that the Products
+will interoperate with any particular Third-Party Service, and Ping Identity's
+support obligations set forth in Section 3.2 shall not extend to any Third-
+Party Services.
+
+11.8  Assignment.  Customer may not assign or transfer, by operation of law or
+otherwise, any of its rights under this Agreement (including its licenses with
+respect to the Software) to any third party without Ping Identity's prior
+written consent, which consent shall not be unreasonably withheld.  Any
+attempted assignment or transfer in violation of the foregoing will be null
+and void.  Ping Identity shall have the right to assign this Agreement to any
+successor to its business or assets to which this Agreement relates, whether
+by merger, sale of assets, sale of stock, reorganization or otherwise.  All
+provisions of this Agreement shall be binding upon, inure to the benefit of
+and be enforceable by and against the respective successors and permitted
+assigns of Ping Identity and Customer.
+
+11.9  Governing Law.  The laws of the State of Colorado, United States of
+America (without reference or giving effect to any conflict of laws principles
+that would require the application of the laws of any other jurisdiction)
+govern this Agreement and all matters arising out of or relating to this
+Agreement, including, without limitation, validity, interpretation,
+construction, performance, and enforcement.  Any dispute, action, claim or
+cause of action arising out of, relating to, or in connection with this
+Agreement or the Products shall be only brought in and is subject to the
+exclusive jurisdiction of the state and federal courts located in Denver,
+Colorado USA.  Each party waives, to the fullest extent of the law, any
+objection to venue in such courts, and each party hereby irrevocably submits
+and consents to the exclusive jurisdiction of such courts.
+
+11.10  U.S. Government End Users.  If Customer is a branch or agency of the
+United States Government, the following provision applies.  The Software is
+comprised of "commercial computer software" and "commercial computer software
+documentation" as such terms are used in 48 C.F.R. 12.212 and qualify as
+"commercial items" as defined in 48 C.F.R. 2.101.  Both the software and
+documentation are provided to the Government: (a) for acquisition by or on
+behalf of civilian agencies, consistent with the policy set forth in 48 C.F.R.
+12.212; or (b) for acquisition by or on behalf of units of the Department of
+Defense, consistent with the policies set forth in 48 C.F.R. 227.7202-1 and
+227.7202-3.  The Government shall acquire the software and documentation with
+only those rights set forth in this Agreement, and any use of the software and
+documentation by the Government constitutes agreement by the Government that
+that the software are documentation are "commercial computer software" and
+"commercial computer software documentation" as defined in this paragraph and
+constitutes acceptance of the rights and restrictions herein.
+
+11.11  Marketing and Publicity.  Upon execution of this Agreement, Ping
+Identity may identify Customer as a customer of Ping Identity on Ping
+Identity's website as well as within any written and/or electronic marketing
+material relating to Ping Identity's products and/or services.
+
+11.12  Application Linkage in the Service.  If Customer is utilizing the
+Service to enable entities to connect into its applications, Ping Identity
+may list Customer's name and accompanying logo within the Service portal
+and/or application catalog in order to facilitate such intended functionality
+of the Service.  Customer hereby grants Ping Identity a limited,
+non-exclusive license to its trademarks in order to implement the foregoing
+provision.  Notwithstanding the foregoing, Customer may contact Ping Identity
+following execution of this Agreement and request in writing that Ping
+Identity refrain from listing Customer on any of the materials and/or portals
+referenced herein.
+
+11.13  Headings, Advice of Counsel, and Drafting.  Headings used in this
+Agreement are provided for convenience only and will not in any way affect the
+meaning or interpretation of each section.  The Parties acknowledge that they
+have been advised by counsel of their own choosing, or had the opportunity to
+seek such counsel, and that its terms will be interpreted without any bias
+against one Party as drafter.
+
+11.14  Entire Agreement.  This Agreement, including all exhibits hereto, the
+Security Policy, the Support Policy, and all Order Forms, constitutes the
+final agreement between the parties, and is the complete and exclusive
+expression of the parties' agreement on the matters contained in this
+Agreement.  All Exhibits and Order Forms are incorporated into this Agreement
+by reference.  All prior agreements (including any click-through agreement
+associated with the Products), proposals or representations, written or oral,
+concerning the subject matter contained in this Agreement, are expressly
+merged into and superseded by this Agreement (for purposes of clarity, in the
+event that Customer has executed a separate agreement with Ping Identity for
+any other Ping Identity product or service not contemplated herein, such
+agreement is not merged into or superseded by this Agreement).  Any prior non-
+disclosure, confidentiality, or similar agreement between the Parties is
+expressly superseded by this Agreement and the confidential or proprietary
+information previously disclosed thereunder shall become "Confidential
+Information" under the terms of this Agreement as if originally disclosed
+hereunder.  In entering this Agreement, neither party has relied upon any
+statement, representation, warranty or agreement of the other party except for
+those expressly contained in this Agreement.  To the extent of any conflict or
+inconsistency between the provisions in the body of this Agreement and any
+exhibit or addendum hereto or any Order Form, the terms of such exhibit,
+addendum or Order Form shall prevail.  Notwithstanding any language to the
+contrary therein, no terms or conditions stated in a Customer purchase order
+or in any other Customer order documentation (excluding Order Forms) shall be
+incorporated into or form any part of this Agreement, and all such terms or
+conditions shall be null and void.
+
+11.15  Modifications, Amendments and Waivers.  This Agreement may not be
+modified except by written instrument signed by both Parties.  Notwithstanding
+the foregoing sentence, Ping Identity may amend the Security Policy and
+Support Policy from time to time by posting such amendment(s) at the URLs
+listed in Sections 3.1(a) and 3.2, or alternate URLs as may be provided to
+Customer by Ping Identity from time to time. Customer acknowledges and agrees
+that Customer's continued use of the Products after the posting of such an
+amendment shall constitute Customer's consent to such amendment and agreement
+to be bound by same.
+
+11.16  Counterparts.  Any Order Forms may be executed by facsimile, PDF or
+other electronic means, and in one or more counterparts, which taken together
+shall form one legal instrument.

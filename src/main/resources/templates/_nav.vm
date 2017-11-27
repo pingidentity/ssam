@@ -1,0 +1,57 @@
+#parse("_about.vm")
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      #if ($username)
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      #end
+      <div class="navbar-brand">
+        <div class="brand-icon">
+          <img src="images/brand.png">
+        </div>
+        <span class="divider-vertical"></span>
+        <span>Self Service Account Manager</span>
+      </div>
+    </div>
+
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+      #if ($username)
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="glyphicon glyphicon-user"></span>
+            <span>$username</span>
+            <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+          #if ("" != $settings.getHomeURL().trim())
+            <li><a href="$settings.getHomeURL()">Home</a></li>
+          #end
+            <li><a href="#" id="changePasswordLink">Change Password</a></li>
+            <li><a href="#" id="logoutLink">Sign Out</a></li>
+          #if ($settings.isSelfServiceDeleteEnabled()) 
+            <li role="separator" class="divider"></li>
+            <li><a href="#" id="deleteAccount">Delete Account</a></li> 
+          #end
+          </ul>
+        </li>
+      #end
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-question-sign"></span>
+              <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a data-toggle="modal" href="#splashscreen">About</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>

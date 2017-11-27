@@ -1,0 +1,21 @@
+<div class="form-group">
+  <label for="accountType" class="control-label">Account Type</label>
+  <div class="row">
+    <div class="col-md-3">
+      ## If there is not already a businessCategory attribute, a user is registering
+      ## select default account type
+      ## OR, if there is already a businessCategory attribute, a user is authenticated
+      ## select current account type
+      <input type="radio" value="free" name="businessCategory" #if (!$businessCategory || $businessCategory == "free") checked #end>
+      Free
+    </div>
+    <div class="col-md-4">
+      <input type="radio" value="corp" name="businessCategory" #if ($businessCategory == "corp") checked #end>
+      Corporate
+    </div>
+    <div class="col-md-4">
+      <input type="radio" value="premium" name="businessCategory" #if ($businessCategory == "premium") checked #end>
+      Premium
+    </div>
+  </div>
+</div>

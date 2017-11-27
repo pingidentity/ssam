@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Service Account Manager - Profile</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ssam.css" rel="stylesheet">
+    <link href="images/favicon.ico" rel="shortcut icon">
+  </head>
+  <body>
+    #parse("_nav.vm")
+    <div class="container">
+      <div class="col-md-6 col-md-offset-3">
+        <div id="errorAlerts">
+          #if ($error)
+          <div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <span>$error</span>
+          </div>
+          #end
+        </div>
+        <div id="successAlerts">
+          #if ($success)
+          <div class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <span>$success</span>
+          </div>
+          #end
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">User Profile</h3>
+          </div>
+          <div class="panel-body">
+            <!--
+              To make form inputs required, simply add the 'required' attribute before the
+              closing tag to the element:
+                <input ... class="form-control" name="my-attribute" required>
+              And, to show the users that the input is required, simply add the 'required' class to
+              the 'class' attribute of the corresponding 'label' element:
+                <label for="my-attribute" class="control-label required">...</label>
+            -->
+            <form id="userForm" action="user" method="POST">
+              <input type="hidden" name="$_csrf.parameterName" value="$_csrf.token" />
+
+              <div class="form-group">
+                <label class="control-label">Email</label>
+                <p class="form-control-static">$!mail</p>
+              </div>
+
+              <div class="form-group">
+                <label for="firstName" class="control-label">Name</label>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label class="sr-only" for="givenName">First Name</label>
+                    <input type="text" class="form-control" name="givenName" value="$!givenName" placeholder="First/Given Name">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="sr-only" for="sn">Last Name</label>
+                    <input type="text" class="form-control" name="sn" value="$!sn" placeholder="Last/Family Name">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label">Address</label>
+                <input type="text" class="form-control" name="street" placeholder="Street Address" value="$!street">
+              </div>
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-6" style="padding-right: 0px;">
+                    <input type="text" class="form-control" name="l" placeholder="City or Locality" value="$!l">
+                  </div>
+                  <div class="col-md-3" style="padding-right: 0px;">
+                    <input type="text" class="form-control" name="st" placeholder="State or Region" value="$!st">
+                  </div>
+                  <div class="col-md-3">
+                    <input type="text" class="form-control" name="postalCode" placeholder="ZIP Code" value="$!postalCode">
+                  </div>
+                </div>
+              </div>
+           
+              <div class="form-group">
+                <label class="control-label" for="mobile">Mobile</label>
+                <input type="text" class="form-control" name="mobile" value="$!mobile" placeholder="Mobile Number">
+              </div>
+              
+            #if($pingActive)
+              #parse("_account-type-input.vm")
+            #end
+            
+            </form>
+          </div>
+          <div class="panel-footer clearfix">
+            <button id="submitButton" type="button" class="btn btn-primary pull-right">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="passwordLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="passwordLabel">Change Password</h4>
+          </div>
+          <div class="modal-body">
+            <div id="passwordChangeAlerts"></div>
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label class="col-sm-4 control-label">Current Password </label>
+                <div class="col-sm-8">
+                  <input id="currentPassword" type="password" class="form-control" placeholder="Enter Current Password">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label">Password </label>
+                <div class="col-sm-8">
+                  <input id="password" type="password" class="form-control" placeholder="Enter New Password">
+                    #parse("_password-requirements.vm")  
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label">Confirm&nbsp;Password </label>
+                <div class="col-sm-8">
+                  <input id="confirmPassword" type="password" class="form-control" placeholder="Re-Enter New Password">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button id="changePasswordButton" type="button" class="btn btn-primary">Change Password</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  #if ($settings.isSelfServiceDeleteEnabled())
+    <div class="modal fade" id="confirmDeletionModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Confirm Account Deletion</h4>
+          </div>
+          <div class="modal-body">
+            <div id="accountDeletionAlerts"></div>
+            Are you sure that you want to permanently delete your account? You will have to create a new account to be able to sign in.
+          </div>
+          <form action="deleteUser" method="POST">
+            <input type="hidden" name="$_csrf.parameterName" value="$_csrf.token"/>
+            <div class="modal-footer">
+              <input id="confirmDeletionButton" type="submit" class="btn btn-danger" value="Delete Account"></input>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  #end
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ssam.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        #if($passwordRequirements.size() > 0)
+          $("#password_requirements_list").on('hide.bs.collapse', function () {
+            $("#requirements_link").text("Show Requirements");
+          });
+          $("#password_requirements_list").on('show.bs.collapse', function () {
+            $("#requirements_link").text("Hide Requirements");
+          });
+        #end
+
+        #if (!$pingActive)
+        // add a click handler to the LDAP logout link 
+        $("#logoutLink").click(function(e) {
+          e.preventDefault();
+          var logoutForm = $('<form action="logout" method="POST" style="display:none"><input type="hidden" name="$_csrf.parameterName" value="$_csrf.token" /></form>');
+          $("body").append(logoutForm);
+          logoutForm.submit();
+        });
+        #else
+        // add a click handler to the Ping logout link 
+        $("#logoutLink").click(function(e) {
+          e.preventDefault();
+          
+          // Logout from PingAccess
+          $.post("$settings.getPingAccessLogoutURL()")
+          .always(function() {
+            // Logout from PingFederate
+            window.location.href = "$settings.getPingFederateLogoutURL()";
+          });     
+        });
+        #end
+
+        // add a click handler to the "change password" link to display the modal
+        $("#changePasswordLink").click(function(e) {
+          // clear the password modal and display it
+          e.preventDefault();
+          closeAlerts($("#passwordChangeAlerts"));
+          $('#passwordModal :input[type="password"]').each(function() {
+            $(this).val("");
+          });
+          $("#passwordModal").modal("show");
+        });
+
+        // add a click handler to the "change password" button to perform
+        // validation and send an AJAX request
+        $("#changePasswordButton").click(function() {
+          // make sure the password was provided
+          var currentPassword = $("#currentPassword").val().trim();
+          var password = $("#password").val().trim();
+          var confirmPassword = $("#confirmPassword").val().trim();
+          if (currentPassword === "" || password === "") {
+            showAlert($("#passwordChangeAlerts"), true, "Password is required.");
+            return;
+          }
+
+          // make sure the passwords match
+          if (password !== confirmPassword) {
+            showAlert($("#passwordChangeAlerts"), true, "Passwords must match.");
+            return;
+          }
+
+          // perform a POST to update the password, which will return an error
+          // message if it fails
+          var data = {
+            "$_csrf.parameterName" : "$_csrf.token",
+            "currentPassword" : currentPassword,
+            "password" : password
+          };
+          $.post("updatePassword", data, function() {
+            // clear the password inputs, hide the modal, and display a message
+            $('#passwordModal :input[type="password"]').each(function() {
+              $(this).val("");
+            });
+            $("#passwordModal").modal("hide");
+            closeAlerts($("#errorAlerts"));
+            showAlert($("#successAlerts"), false, "Password was successfully changed.");
+          })
+          .fail(function(error) {
+            if(error.status === 403) {
+              window.location.reload(true);
+            }
+            else {
+              showAlert($("#passwordChangeAlerts"), true, error.responseText);
+            }
+          });
+        });
+        
+      #if($settings.isSelfServiceDeleteEnabled())
+        // add a click handler to the "delete account" link to display the modal
+        $("#deleteAccount").click(function(e) {
+          // display the confirm deletion modal
+          $("#confirmDeletionModal").modal("show");
+        });
+      #end
+
+        // add a click handler to the submit button to verify and submit the form
+        $("#submitButton").click(function() {
+          // make sure the required inputs are present
+          var userForm = $("#userForm");
+          if (!verifyRequiredInputs(userForm, $("#errorAlerts"), $("#successAlerts"))) {
+            return;
+          }
+
+          // add inputs to the form for "composed" attributes
+          var first = $('input[name="givenName"]').val().trim();
+          var last = $('input[name="sn"]').val().trim();
+          var cn = "";
+          if(first && last)
+          {
+            cn = first + " " + last;
+          }
+          var address = cn + '$' + $('input[name="street"]').val().trim() + '$' + $('input[name="l"]').val().trim() + ', ' + $('input[name="st"]').val().trim() + '  ' + $('input[name="postalCode"]').val().trim();
+          userForm.append('<input type="hidden" name="cn" value="' + cn + '">');
+          userForm.append('<input type="hidden" name="postalAddress" value="' + address + '">');
+          userForm.submit();
+        });
+      });
+    </script>
+  </body>
+</html>

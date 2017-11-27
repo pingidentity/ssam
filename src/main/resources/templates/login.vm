@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Service Account Manager - Sign In</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ssam.css" rel="stylesheet">
+    <link href="images/favicon.ico" rel="shortcut icon">
+  </head>
+  <body>
+    #parse("_nav.vm")
+    <div class="container">
+      <form class="form-signin" action="login" method="POST">
+        #if ($request.getParameter('error'))
+        <div class="alert alert-danger" role="alert">
+          Please enter valid credentials to sign in.
+        </div>
+        #end
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input type="hidden" name="$_csrf.parameterName" value="$_csrf.token" />
+        <label for="inputUsername" class="sr-only">Email/Username</label>
+        <input type="text" id="inputUsername" name="username" class="form-control" placeholder="Email/Username" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <div style="margin-top: 5px;">
+          <a href="recoverPassword">Forgot password?</a>
+          <br>
+          <a href="register">Sign up for an account</a>
+        </div>
+      </form>
+    </div>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
