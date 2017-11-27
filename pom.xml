@@ -28,9 +28,8 @@
   </organization>
 
   <scm>
-    <developerConnection>scm:svn:https://svn.unboundid.lab/products/ssam/trunk</developerConnection>
-    <connection>scm:svn:https://svn.unboundid.lab/products/ssam/trunk</connection>
-    <url>https://svn.unboundid.lab/products/ssam/trunk</url>
+    <connection>scm:git:https://github.com/pingidentity/ssam</connection>
+    <url>https://github.com/pingidentity/ssam</url>
   </scm>
 
   <distributionManagement>

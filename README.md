@@ -20,12 +20,12 @@ Refer to the PDF documentation included with this software package for
 installation, configuration, integration, and customization information.
 
 
-## Support
+###Support and reporting bugs
 
-To register for an UnboundID support account, please send an email with your
-name, role, and company to
-mailto://support@unboundid.com
+This is unsupported sample code. Help will be provided on a best-effort basis through GitHub. Please report issues
+using the project's [issue tracker](https://github.com/pingidentity/ssam/issues).
 
 
-To submit a support ticket or to ask questions, log in to our Support Portal at
-http://support.unboundid.com
+## License
+
+This is licensed under the Apache License 2.0.
