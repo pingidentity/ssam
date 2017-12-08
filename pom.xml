@@ -32,84 +32,92 @@
     <url>https://github.com/pingidentity/ssam</url>
   </scm>
 
-  <distributionManagement>
-    <repository>
-      <id>releases</id>
-      <url>http://maven-eng.unboundid.lab:8080/nexus/content/repositories/releases</url>
-    </repository>
-    <snapshotRepository>
-      <id>snapshots</id>
-      <url>http://maven-eng.unboundid.lab:8080/nexus/content/repositories/snapshots</url>
-    </snapshotRepository>
-  </distributionManagement>
+  <profiles>
+    <profile>
+      <id>UnboundID</id>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-      </plugin>
-      <!-- Generate the javadocs to include in the assembly. -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.10.1</version>
-        <executions>
-          <execution>
-            <id>javadocs</id>
-            <phase>package</phase>
-            <goals>
-              <goal>javadoc</goal>
-            </goals>
-            <configuration>
-              <links>
-                <link>http://docs.ldap.com/ldap-sdk/docs/javadoc</link>
-                <link>http://docs.spring.io/spring-boot/docs/${spring-boot.version}/api</link>
-                <link>http://docs.spring.io/autorepo/docs/spring-security/${spring-security.version}/apidocs</link>
-                <link>http://docs.spring.io/spring/docs/${spring.version}/javadoc-api</link>
-              </links>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <!-- Create the image assembly. -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <version>2.5.5</version>
-        <executions>
-          <execution>
-            <id>make-assembly</id>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-            <configuration>
-              <descriptors>
-                <descriptor>src/main/assembly/image.xml</descriptor>
-              </descriptors>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-    <!-- Filter the properties files, but nothing else. -->
-    <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-        <filtering>true</filtering>
-        <includes>
-          <include>**/*.properties</include>
-        </includes>
-      </resource>
-      <resource>
-        <directory>src/main/resources</directory>
-        <excludes>
-          <exclude>**/*.properties</exclude>
-        </excludes>
-      </resource>
-    </resources>
-  </build>
+      <distributionManagement>
+        <repository>
+          <id>releases</id>
+          <url>${releaseRepoUrl}</url>
+        </repository>
+        <snapshotRepository>
+          <id>snapshots</id>
+          <url>${snapshotRepoUrl}</url>
+        </snapshotRepository>
+      </distributionManagement>
+
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+          </plugin>
+          <!-- Generate the javadocs to include in the assembly. -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>2.10.1</version>
+            <executions>
+              <execution>
+                <id>javadocs</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>javadoc</goal>
+                </goals>
+                <configuration>
+                  <links>
+                    <link>http://docs.ldap.com/ldap-sdk/docs/javadoc</link>
+                    <link>http://docs.spring.io/spring-boot/docs/${spring-boot.version}/api</link>
+                    <link>http://docs.spring.io/autorepo/docs/spring-security/${spring-security.version}/apidocs</link>
+                    <link>http://docs.spring.io/spring/docs/${spring.version}/javadoc-api</link>
+                  </links>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+          <!-- Create the image assembly. -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <version>2.5.5</version>
+            <executions>
+              <execution>
+                <id>make-assembly</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>single</goal>
+                </goals>
+                <configuration>
+                  <descriptors>
+                    <descriptor>src/main/assembly/image.xml</descriptor>
+                  </descriptors>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+        <!-- Filter the properties files, but nothing else. -->
+        <resources>
+          <resource>
+            <directory>src/main/resources</directory>
+            <filtering>true</filtering>
+            <includes>
+              <include>**/*.properties</include>
+            </includes>
+          </resource>
+          <resource>
+            <directory>src/main/resources</directory>
+            <excludes>
+              <exclude>**/*.properties</exclude>
+            </excludes>
+          </resource>
+        </resources>
+      </build>
+    </profile>
+  </profiles>
+
+
 
   <dependencies>
     <!-- The following dependencies explicitly override transitive dependencies
