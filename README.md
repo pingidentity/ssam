@@ -19,8 +19,20 @@ deployed with authentication delegated to a PingFederate server.
 Refer to the PDF documentation included with this software package for
 installation, configuration, integration, and customization information.
 
+### Basic Setup
 
-###Support and reporting bugs
+After unpacking the SSAM code it can be setup using the following command:
+```shell
+./ssam/setup.sh --serverRoot /ds/PingDirectory --ldapPort 1636 \
+         --bindDN "cn=Directory Manager" --bindPassword password --useSSL \
+         --trustStorePath /ds/PingDirectory/config/truststore \
+         --peopleBaseDN ou=People,dc=example,dc=com \
+         --smtpServerHostname smtp.example.com \
+         --smtpSenderEmailAddress 'do-not-reply@example.com'
+```
+
+
+### Support and reporting bugs
 
 This is unsupported sample code. Help will be provided on a best-effort basis through GitHub. Please report issues
 using the project's [issue tracker](https://github.com/pingidentity/ssam/issues).
