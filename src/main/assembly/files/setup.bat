@@ -1,5 +1,5 @@
 @echo off
-rem Copyright 2016-2017 Ping Identity Corporation
+rem Copyright 2016-2018 Ping Identity Corporation
 rem
 rem Executes the Self-Service Account Manager application installer.  Run the
 rem script without any arguments to display the help, and refer to the

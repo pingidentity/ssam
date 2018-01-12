@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright 2015-2017 Ping Identity Corporation
+# Copyright 2015-2018 Ping Identity Corporation
 #
 # Executes the Self-Service Account Manager application installer.  Run the
 # script without any arguments to display the help, and refer to the
