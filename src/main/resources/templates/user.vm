@@ -113,20 +113,20 @@
               <div class="form-group">
                 <label class="col-sm-4 control-label">Current Password </label>
                 <div class="col-sm-8">
-                  <input id="currentPassword" type="password" class="form-control" placeholder="Enter Current Password">
+                  <input id="currentPassword" type="password" class="form-control" placeholder="Enter Current Password" autocomplete="off">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-4 control-label">Password </label>
                 <div class="col-sm-8">
-                  <input id="password" type="password" class="form-control" placeholder="Enter New Password">
+                  <input id="password" type="password" class="form-control" placeholder="Enter New Password" autocomplete="off">
                     #parse("_password-requirements.vm")  
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-4 control-label">Confirm&nbsp;Password </label>
                 <div class="col-sm-8">
-                  <input id="confirmPassword" type="password" class="form-control" placeholder="Re-Enter New Password">
+                  <input id="confirmPassword" type="password" class="form-control" placeholder="Re-Enter New Password" autocomplete="off">
                 </div>
               </div>
             </form>
@@ -161,6 +161,10 @@
       </div>
     </div>
   #end
+    <script src="js/ssam-security-patch.js"></script>
+   	<script type="text/javascript">
+   	  buster(document, top);
+   	</script>
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/ssam.js"></script>
@@ -277,8 +281,8 @@
             cn = first + " " + last;
           }
           var address = cn + '$' + $('input[name="street"]').val().trim() + '$' + $('input[name="l"]').val().trim() + ', ' + $('input[name="st"]').val().trim() + '  ' + $('input[name="postalCode"]').val().trim();
-          userForm.append('<input type="hidden" name="cn" value="' + cn + '">');
-          userForm.append('<input type="hidden" name="postalAddress" value="' + address + '">');
+          userForm.append('<input type="hidden" name="cn" value="' + escapeHtml(cn) + '">');
+          userForm.append('<input type="hidden" name="postalAddress" value="' + escapeHtml(address) + '">');
           userForm.submit();
         });
       });

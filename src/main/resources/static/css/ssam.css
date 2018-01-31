@@ -1,3 +1,12 @@
+/*
+ * None style added to help with Frame Busting
+ * intended for older browsers without 'X-Frame-Options' header support.
+ * This method comes from an OWASP write up by Gustav Rydstedt.
+ */
+html {
+  display: none;
+}
+
 .navbar-static-top {
   margin-bottom: 19px;
 }

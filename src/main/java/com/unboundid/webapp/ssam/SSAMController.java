@@ -44,6 +44,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.util.HtmlUtils;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -971,7 +972,7 @@ public class SSAMController
     model.addAttribute("username", username);
     for(Attribute attribute : entry.getAttributes())
     {
-      model.addAttribute(attribute.getName(), attribute.getValue());
+      model.addAttribute(attribute.getName(), HtmlUtils.htmlEscape(attribute.getValue()));
     }
     model.addAttribute("entry", entry);
   }
@@ -989,7 +990,7 @@ public class SSAMController
         String value = parameter.getValue().trim();
         if(!value.isEmpty())
         {
-          model.addAttribute(name, value);
+          model.addAttribute(name, HtmlUtils.htmlEscape(value));
         }
       }
     }

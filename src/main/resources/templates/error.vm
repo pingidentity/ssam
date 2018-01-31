@@ -13,5 +13,9 @@
     <div class="container">
       Something went wrong: $!status $error
     </div>
+    <script src="js/ssam-security-patch.js"></script>
+    <script type="text/javascript">
+      buster(document, top);
+    </script>
   </body>
 </html>
