@@ -21,6 +21,8 @@ public class HTTPHeaderFilter implements javax.servlet.Filter {
             throws java.io.IOException, javax.servlet.ServletException {
 
         HttpServletResponse res = (HttpServletResponse) response;
+        res.setHeader("X-Frame-Options", "DENY");
+        res.setHeader("X-Content-Type-Options", "nosniff");
 
         // Set this variable to the sha256 pin of your public key
         // This value can be generated using the "openssl" command line tool

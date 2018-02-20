@@ -699,6 +699,12 @@ public class SSAMInstaller extends CommandLineTool
       throw new InstallerException("Failed to create log output stream.", ioe);
     }
 
+    // Make sure log file permissions are 0600
+    Set<PosixFilePermission> perms = new HashSet<>();
+    perms.add(PosixFilePermission.OWNER_READ);
+    perms.add(PosixFilePermission.OWNER_WRITE);
+    Files.setPosixFilePermissions(Paths.get(logFile.getCanonicalPath()), perms);
+
 
     File serverRoot = serverRootArg.getValue().getCanonicalFile();
     int ldapPort    = ldapPortArg.getValue();
@@ -1929,7 +1935,19 @@ public class SSAMInstaller extends CommandLineTool
    */
   private String runCommand(String status, List<String> args)
   {
-    String commandAndArgs = Arrays.toString(args.toArray());
+    List<String> obfuscatedArgs = new ArrayList<String>(args);
+
+    // make sure that we're obfuscating passwords
+    for (int index = 0; index < obfuscatedArgs.size()-1; index++)
+    {
+      String curArg = obfuscatedArgs.get(index);
+      if (curArg.equalsIgnoreCase("--bindpassword") || curArg.equals("-w"))
+      {
+        obfuscatedArgs.set(++index, "********");
+      }
+    }
+
+    String commandAndArgs = Arrays.toString(obfuscatedArgs.toArray());
     LOG("=== Running command: " + commandAndArgs);
     Process p;
     final ProcessBuilder pb = new ProcessBuilder(args);

@@ -40,6 +40,7 @@ public class SSAMSettings
   private String pingFederateLogoutURL;
   private String pingAccessLogoutURL;
   private String homeURL;
+  private String[] userFormBlacklist;
 
   /** Returns the LDAP Connection Details resource, a Spring resource.
    * There are multiple ways of specifying a resource path. The default
@@ -307,6 +308,12 @@ public class SSAMSettings
   {
     this.homeURL = homeURL;
   }
+
+  /** Sets the User Form Blacklist entries for attributes that the User cannot update themselves. */
+  public void setUserFormBlacklist(String[] userFormBlacklist) {this.userFormBlacklist = userFormBlacklist;}
+
+  /** Returns  the User Form Blacklist entries for attributes that the User cannot update themselves. */
+  public String[] getUserFormBlacklist() { return userFormBlacklist; }
   
   /** {@inheritDoc} */
   @Override

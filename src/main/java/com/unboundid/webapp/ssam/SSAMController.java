@@ -18,6 +18,7 @@ import java.util.Map;
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.HashSet;
 
 import com.unboundid.ldap.sdk.extensions.PasswordModifyExtendedResult;
 import com.unboundid.ldap.sdk.unboundidds.controls.PasswordPolicyErrorType;
@@ -99,6 +100,8 @@ public class SSAMController
 
   private DN baseDN;
 
+  private HashSet<String> userFormBlacklist = new HashSet<String>();
+
   /** Get the schema. */
   @PostConstruct
   public void initializeSchema() throws LDAPException
@@ -111,6 +114,16 @@ public class SSAMController
   public void initializeBaseDN() throws LDAPException
   {
     baseDN = new DN(settings.getBaseDN());
+  }
+
+  /** Get the userFormBlacklist as a set for quicker lookup .*/
+  @PostConstruct
+  public void initializeUserFormBlacklist()
+  {
+    for(String attribute: settings.getUserFormBlacklist())
+    {
+      userFormBlacklist.add(attribute);
+    }
   }
 
   /** Makes the HTTP request available in the model. */
@@ -251,6 +264,10 @@ public class SSAMController
       {
         // only handle attributes defined in the schema
         String attribute = e.getKey();
+
+        // make sure we don't update anything from the blacklist
+        if (userFormBlacklist.contains(attribute)) continue;
+
         if(schema.getAttributeType(attribute) != null)
         {
           // either remove the value from the entry or update it

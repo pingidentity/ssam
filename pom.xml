@@ -35,6 +35,9 @@
   <profiles>
     <profile>
       <id>UnboundID</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
 
       <distributionManagement>
         <repository>
