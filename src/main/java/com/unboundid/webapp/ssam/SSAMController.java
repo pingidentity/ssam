@@ -226,7 +226,7 @@ public class SSAMController
     catch(LDAPException e)
     {
       // if we can't get the entry, just display the error page
-      model.addAttribute("error", e.getMessage());
+      model.addAttribute("error", HtmlUtils.htmlEscape(e.getMessage()));
       return "error";
     }
   }
@@ -298,7 +298,7 @@ public class SSAMController
     {
       // if we couldn't even get the entry, something bad happened, so return
       // the error view
-      model.addAttribute("error", e.getMessage());
+      model.addAttribute("error", HtmlUtils.htmlEscape(e.getMessage()));
       if(targetEntry == null)
       {
         model.addAttribute("username", username);
@@ -557,8 +557,8 @@ public class SSAMController
       ResultCode resultCode = result.getResultCode();
       if(resultCode != ResultCode.SUCCESS)
       {
-        model.addAttribute("error", resultCode + " - " 
-            + result.getDiagnosticMessage());
+        model.addAttribute("error", HtmlUtils.htmlEscape(resultCode + " - "
+            + result.getDiagnosticMessage()));
         model.addAttribute("passwordRequirements",
                 getPasswordRequirements(null));
         populateRegistrationModel(parameters, model);
@@ -580,7 +580,7 @@ public class SSAMController
     catch(LDAPException e)
     {
       log.error("Encountered error creating user", e);
-      model.addAttribute("error", e.getMessage());
+      model.addAttribute("error", HtmlUtils.htmlEscape(e.getMessage()));
       model.addAttribute("passwordRequirements", getPasswordRequirements(null));
       populateRegistrationModel(parameters, model);
       return "register";
@@ -589,7 +589,7 @@ public class SSAMController
     {
       log.error(e.getMessage(), e);
       // add an accessible error to the model
-      model.addAttribute("error", e.getMessage());
+      model.addAttribute("error", HtmlUtils.htmlEscape(e.getMessage()));
       model.addAttribute("passwordRequirements", getPasswordRequirements(null));
       populateRegistrationModel(parameters, model);
       return "register";
@@ -867,7 +867,7 @@ public class SSAMController
       {
         log.error("Resetting password for user '" + userDN + "' failed: " +
           result.getResultString());
-        model.addAttribute("error", result.getResultString());
+        model.addAttribute("error", HtmlUtils.htmlEscape(result.getResultString()));
         session.setAttribute("useRecaptcha", true);
         model.addAttribute("useRecaptcha", true);
 
@@ -883,7 +883,7 @@ public class SSAMController
       // "verify" page with an error
       log.error("Encountered exception resetting password for user '" + userDN
               + "'", e);
-      model.addAttribute("error", e.getMessage());
+      model.addAttribute("error", HtmlUtils.htmlEscape(e.getMessage()));
 
       // adds reCAPTCHA for the session to prevent brute forcing the
       // verification code
@@ -898,7 +898,7 @@ public class SSAMController
     {
       log.error(e.getMessage());
       // display the error alert
-      model.addAttribute("error", e.getMessage());
+      model.addAttribute("error", HtmlUtils.htmlEscape(e.getMessage()));
       return "recover-password-verify";
     }
   }

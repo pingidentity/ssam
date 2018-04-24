@@ -11,6 +11,7 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.Banner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
@@ -71,7 +72,7 @@ public class SSAMApplication extends SpringBootServletInitializer
     else
     {
       new SpringApplicationBuilder(SSAMApplication.class)
-              .showBanner(false).run(args);
+              .bannerMode(Banner.Mode.OFF).run(args);
     }
   }
 
@@ -83,7 +84,7 @@ public class SSAMApplication extends SpringBootServletInitializer
     // Register the Spring Boot application so that the web application is
     // configured appropriately when launched by the servlet container. This is
     // needed when creating a Spring Boot deployable war.
-    return application.sources(SSAMApplication.class).showBanner(false);
+    return application.sources(SSAMApplication.class).bannerMode(Banner.Mode.OFF);
   }
 
   /**

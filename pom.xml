@@ -138,12 +138,12 @@
     <dependency>
       <groupId>org.apache.tomcat.embed</groupId>
       <artifactId>tomcat-embed-el</artifactId>
-      <version>8.0.50</version>
+      <version>8.0.51</version>
     </dependency>
     <dependency>
       <groupId>org.apache.tomcat.embed</groupId>
       <artifactId>tomcat-embed-core</artifactId>
-      <version>8.0.50</version>
+      <version>8.0.51</version>
       <scope>provided</scope>
       <exclusions>
         <exclusion>
@@ -155,13 +155,13 @@
     <dependency>
       <groupId>org.apache.tomcat.embed</groupId>
       <artifactId>tomcat-embed-logging-juli</artifactId>
-      <version>8.0.50</version>
+      <version>8.0.51</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.tomcat.embed</groupId>
       <artifactId>tomcat-embed-websocket</artifactId>
-      <version>8.0.50</version>
+      <version>8.0.51</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -258,7 +258,7 @@
     <dependency>
       <groupId>com.unboundid</groupId>
       <artifactId>unboundid-ldapsdk-commercial-edition</artifactId>
-      <version>3.1.1</version>
+      <version>3.2.1</version>
     </dependency>
 
     <dependency>
